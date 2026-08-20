@@ -1,0 +1,8 @@
+{
+  "user_1": {
+    "username": "D",
+    "email": "d@example.com",
+    "password": "secret",
+    "timezone": "America/Los_Angeles"
+  }
+}
