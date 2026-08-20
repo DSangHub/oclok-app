@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login — oclok.app</title>
+<link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+<div class="main">
+  <h1>Login</h1>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Log in</button>
+  <p id="result"></p>
+</div>
+<script>
+async function login() {
+  const body = {
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value
+  };
+  const res = await fetch("/api/auth/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  const data = await res.json();
+  document.getElementById("result").textContent =
+    data.userId ? `Logged in as ${data.username} (userId: ${data.userId})` : data.error;
+}
+</script>
+</body>
+</html>
