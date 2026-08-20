@@ -1,11 +1,15 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/signup", "dest": "/pages/signup.html" },
-    { "src": "/login", "dest": "/pages/login.html" },
-    { "src": "/dashboard", "dest": "/pages/dashboard.html" },
-    { "src": "/docs", "dest": "/pages/docs.html" },
-    { "src": "/", "dest": "/pages/index.html" },
+    { "src": "/signup", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/public/scripts/public/scripts/pages/pages/signup.html" },
+    { "src": "/login", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/public/scripts/public/scripts/pages/pages/pages/login.html" },
+    { "src": "/dashboard", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/public/scripts/public/scripts/pages/pages/pages/pages/dashboard.html" },
+    { "src": "/docs", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/public/scripts/public/scripts/pages/pages/pages/pages/pages/docs.html" },
+    { "src": "/public/styles.css", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/styles.css" },
+    { "src": "/public/globe.svg", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/public/scripts/public/scripts/pages/pages/pages/pages/pages/public/globe.svg" },
+    { "src": "/public/scripts/clock.js", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/public/scripts/clock.js" },
+    { "src": "/public/scripts/dashboard.js", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/public/scripts/public/scripts/dashboard.js" },
+    { "src": "/", "dest": "/data/data/data/api/auth/api/auth/api/user/[id]/api/vl/user/[id]/public/public/scripts/public/scripts/pages/index.html" },
     { "src": "/api/(.*)", "dest": "/api/$1" }
   ]
 }
