@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>oclok.app — Clock Status Platform</title>
+<link rel="stylesheet" href="/public/styles.css">
+<style>
+  .globe {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 140px;
+    height: 140px;
+    animation: spin 12s linear infinite;
+    filter: drop-shadow(0 0 12px #00eaff);
+  }
+  @keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+  .clock {
+    font-size: 18vw;
+    text-shadow: 0 0 40px #00eaff;
+  }
+</style>
+</head>
+<body>
+<img src="/public/globe.svg" class="globe">
+<div class="main">
+  <div id="clock" class="clock">00:00:00</div>
+  <p>oclok.app • Clock Status for Apps</p>
+  <p><a href="/signup">Sign up</a> • <a href="/login">Log in</a> • <a href="/docs">Docs</a></p>
+</div>
+<script src="/public/scripts/clock.js"></script>
+</body>
+</html>
