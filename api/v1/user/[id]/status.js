@@ -1,8 +1,15 @@
-import users from "../../../../data/users.json";
-import schedules from "../../../../data/schedules.json";
+import fs from "fs";
+import path from "path";
 
 export default function handler(req, res) {
   const { id } = req.query;
+
+  const usersPath = path.join(process.cwd(), "data", "users.json");
+  const schedulesPath = path.join(process.cwd(), "data", "schedules.json");
+
+  const users = JSON.parse(fs.readFileSync(usersPath, "utf8"));
+  const schedules = JSON.parse(fs.readFileSync(schedulesPath, "utf8"));
+
   const user = users[id];
   const schedule = schedules[id];
 
