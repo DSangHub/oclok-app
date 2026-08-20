@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/signup", "dest": "/pages/signup.html" },
+    { "src": "/login", "dest": "/pages/login.html" },
+    { "src": "/dashboard", "dest": "/pages/dashboard.html" },
+    { "src": "/docs", "dest": "/pages/docs.html" },
+    { "src": "/", "dest": "/pages/index.html" },
+    { "src": "/api/(.*)", "dest": "/api/$1" }
+  ]
+}
