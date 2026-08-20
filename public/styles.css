@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #0a0f1f, #000000 80%);
+  color: #00eaff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.main {
+  text-align: center;
+  padding-top: 15vh;
+}
+
+input, button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid #00eaff55;
+  background: #050811;
+  color: #00eaff;
+}
