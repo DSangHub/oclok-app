@@ -2,35 +2,43 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>oclok.app — Clock Status Platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oclok.app — Choose Your Clock</title>
 <link rel="stylesheet" href="/public/styles.css">
-<style>
-  .globe {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 140px;
-    height: 140px;
-    animation: spin 12s linear infinite;
-    filter: drop-shadow(0 0 12px #00eaff);
-  }
-  @keyframes spin {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
-  }
-  .clock {
-    font-size: 18vw;
-    text-shadow: 0 0 40px #00eaff;
-  }
-</style>
 </head>
-<body>
-<img src="/public/globe.svg" class="globe">
-<div class="main">
-  <div id="clock" class="clock">00:00:00</div>
-  <p>oclok.app • Clock Status for Apps</p>
-  <p><a href="/signup">Sign up</a> • <a href="/login">Log in</a> • <a href="/docs">Docs</a></p>
-</div>
+<body data-clock="neon">
+<img src="/public/globe.svg" class="globe" alt="">
+<main class="main home">
+  <p class="eyebrow">YOUR TIME. YOUR STYLE.</p>
+  <div id="clock" class="clock" aria-live="polite">00:00:00</div>
+  <h1>Choose your clock</h1>
+  <p class="intro">Pick the face that fits your profile. You can change it anytime.</p>
+
+  <section class="clock-grid" aria-label="Clock choices">
+    <button class="clock-choice selected" data-style="neon" aria-pressed="true">
+      <img src="/public/clocks/neon-digital.svg" alt="Neon digital clock">
+      <span>Neon Digital</span>
+    </button>
+    <button class="clock-choice" data-style="classic" aria-pressed="false">
+      <img src="/public/clocks/classic-analog.svg" alt="Classic analog clock">
+      <span>Classic Analog</span>
+    </button>
+    <button class="clock-choice" data-style="minimal" aria-pressed="false">
+      <img src="/public/clocks/minimal-white.svg" alt="Minimal white clock">
+      <span>Minimal White</span>
+    </button>
+    <button class="clock-choice" data-style="world" aria-pressed="false">
+      <img src="/public/clocks/world-clock.svg" alt="World clock">
+      <span>World Clock</span>
+    </button>
+    <button class="clock-choice" data-style="flip" aria-pressed="false">
+      <img src="/public/clocks/flip-clock.svg" alt="Retro flip clock">
+      <span>Retro Flip</span>
+    </button>
+  </section>
+
+  <p class="nav-links"><a href="/signup">Sign up</a><span>•</span><a href="/login">Log in</a><span>•</span><a href="/docs">Docs</a></p>
+</main>
 <script src="/public/scripts/clock.js"></script>
 </body>
 </html>
