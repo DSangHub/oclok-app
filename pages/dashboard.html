@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard — oclok.app</title>
+<link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+<div class="main">
+  <h1>Dashboard</h1>
+  <p>Enter your userId to preview your Clock Status:</p>
+  <input id="userId" placeholder="user_1">
+  <button onclick="load()">Load status</button>
+  <p id="status"></p>
+  <p id="next"></p>
+</div>
+<script>
+async function load() {
+  const id = document.getElementById("userId").value;
+  const res = await fetch(`/api/v1/user/${id}/status`);
+  const data = await res.json();
+  if (data.error) {
+    document.getElementById("status").textContent = data.error;
+    document.getElementById("next").textContent = "";
+    return;
+  }
+  document.getElementById("status").textContent =
+    `${data.user} • ${data.status.toUpperCase()} • ${data.timezone}`;
+  document.getElementById("next").textContent =
+    data.nextOnline ? `Next online: ${data.nextOnline}` : "No upcoming window";
+}
+</script>
+</body>
+</html>
