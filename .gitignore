@@ -1,0 +1,5 @@
+node_modules
+.env
+bash
+gitignore
+data/data/
